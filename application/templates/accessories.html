@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hayley Mobile</title>
+        <meta charset="utf-8">
+        <meta name ="Mobile" content="Any Brand Any Make We have it">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="accessories.css">
+        
+        
+    </head>
+
+    <body>
+        
+        <header class ="header">
+            <h1>Hayley Mobile</h1>
+            Any Make Any Brand. We have it.
+        </header>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <div class="topnav">
+          <div class="search-container">
+               
+                 <form method="POST" action="{{ url_for('index')}}">
+                   {{form.searchField}}
+                   {{form.submitBtn}}
+                 </form>
+               </div>
+         <div class="topnav-right">
+
+           <a href ="{{url_for('index')}}">Home</a> 
+           <a href="{{url_for('phones')}}">Phones</a>
+           <a href="{{url_for('tablets')}}">Tablets</a>
+           <a href="{{url_for('accessories')}}">Accessories</a>
+           <a href="{{url_for('cart')}}"><i class="fa fa-shopping-cart" >My Cart</i></a></a>
+
+         </div>
+       </div>
+        </div>
+        <div class="container">
+          <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="images/download.jpeg" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Beats Studio 3</h4>
+                <h5 class="card-text"> $450</h5>
+                <p class="card-text">Hear the music not the noise.</p>
+                <a href="#" class="btn btn-primary">Details</a>
+              </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="images/30206989894_e1107e6b77_b.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title">Beats Solo 3</h4>
+                <h5 class="card-text"> $250</h5>
+                <p class="card-text">This changes everything.</p>
+                <a href="#!" class="btn btn-primary"> Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>  

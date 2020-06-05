@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hayley Mobile</title>
+        <meta charset="utf-8">
+        <meta name ="Mobile" content="Any Brand Any Make We have it">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="iphonex.css">
+        <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon"/>
+        <link rel='stylesheet' href="{{ url_for('static', filename='bootstrap-4.4.1/css/bootstrap.min.css') }}"/>
+        <link rel='stylesheet' href="{{ url_for('static', filename='bootstrap-4.4.1/css/mdb.min.css') }}"/>
+        <link rel='stylesheet' href="{{ url_for('static', filename='css/main.css') }}"/>
+        <link rel='stylesheet' href="{{ url_for('static', filename='css/style-phone.css') }}"/>
+        <link rel='stylesheet' href="{{ url_for('static', filename='css/iphonex.css') }}"/>
+        <script src="{{ url_for('static',filename='js/jquery.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/popper.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='bootstrap-4.4.1/js/bootstrap.min.js')}}"></script>
+        <script type="text/javascript" src="{{ url_for('static',filename='bootstrap-4.4.1/js/mdb.min.js')}}"></script>
+        
+        
+    </head>
+
+    <body>
+        
+        <header class ="header">
+            <h1>Hayley Mobile</h1>
+            Any Make Any Brand. We have it.
+        </header>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <div class="topnav">
+            <div class="search-container">
+                 
+                   <form method="POST" action="{{ url_for('index')}}">
+                     {{form.searchField}}
+                     {{form.submitBtn}}
+                   </form>
+                 </div>
+           <div class="topnav-right">
+
+             <a href ="{{url_for('index')}}">Home</a> 
+             <a href="{{url_for('phones')}}">Phones</a>
+             <a href="{{url_for('tablets')}}">Tablets</a>
+             <a href="{{url_for('accessories')}}">Accessories</a>
+             <a href="{{url_for('cart')}}"><i class="fa fa-shopping-cart" >My Cart</i></a></a>
+
+           </div>
+         </div>
+        </div>
+        <section class = "single-product">
+            <div class="container">
+                <div class="row">
+                    <div class ="col-md-5">
+                        <div class="img">
+                            <img class="card-img-top" src="{{url_for('static',filename='phone.png')}}" alt="Ipad Pro 12">
+
+    
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        
+                        <h2>{{ details.product_name}}</h2>
+                        <p>Product ID: {{details.id}}</p>
+    
+                        <p class="price">
+                            {{details.price}}
+                        </p>
+                        <p><b>Availbility</b> {{available}}</p>
+                        <label>Amount: </label>
+                        <input type="number" id='quantity' value=1> 
+                        <script>
+                            const getOut = ()=>{
+                            
+                                const quantity = document.querySelector("#quantity").value
+                                if(quantity > 0){
+                                    document.location = "{{url_for('add_to_cart',productId=details.id, quantity='')|safe}}"+quantity   
+                                }else{
+                                    alert("Invalid amount")
+                                }
+                               
+                            }
+                        </script>
+                        <button type="button" class="btn btn-primary" onclick="getOut()">Add to Cart</button>
+                        <h4>Product Description</h4>
+                <p>
+                    {{details.product_description}}
+                </p>
+               
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

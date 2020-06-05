@@ -1,0 +1,21 @@
+body,html{
+    margin:0px;
+    padding:0px;
+}
+.main{
+    padding:10px;
+}
+.data-container.col-lg-3{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.data-container.col-md-4{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+.badge{
+    padding-left: 6px;
+    padding-right: 6px;
+}

@@ -1,0 +1,90 @@
+
+  .header{
+    background: #000000;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: yellowgreen;
+}
+body{
+    background: rgb(0, 0, 0);
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+    h5{
+        color: rgb(5, 119, 24);
+      }
+      
+      .fa-search{
+        color:black;
+        
+      }
+      .fa-shopping-cart{
+        color: mintcream;
+        font-size: 20px;
+        background: red;
+        text-align: left;
+      }
+      .topnav{
+        overflow: hidden;
+        background-color: greenyellow;
+      }
+      .topnav-right {
+float: right;
+}
+.topnav a {
+float: left;
+color: black;
+font-weight: bold;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}  
+.search-container{
+text-align: left;
+padding-left: 20;
+}        
+  .single-product{
+       margin-top:65px;
+  }
+  
+  .col-md-7 h2{
+      color:navy
+
+  }
+  .single-product .price{
+      color:rgb(158, 241, 33);
+      font-size: 26px;
+      font-weight: bold;
+      padding-top: 20px;
+
+ }
+ .single-product input
+ {
+     border: 1px solid #ccc;
+     font-weight: bold;
+     height: 31px;
+     text-align: center;
+     width:31px;
+
+ }
+ .single-product .btn-primary
+ {
+     background: rgb(62, 99, 8) !important;
+     font-size: 15px;
+     margin-left: 20px;
+ }
+ .col-md-7 h4{
+     color: red;
+     font-weight: bold;
+     margin-top: 46px;
+
+ }
+ .fa-shopping-cart{
+    color: mintcream;
+    font-size: 20px;
+    background: red;
+  }
+  .col-md-7{
+      text-align: right;
+  }

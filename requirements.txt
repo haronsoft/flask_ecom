@@ -1,0 +1,6 @@
+flask==0.12
+Flask-SQLAlchemy==2.1
+Flask_WTF==0.14.2
+werkzeug==0.16.0
+flask-cors
+flask-session
